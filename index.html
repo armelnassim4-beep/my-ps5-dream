@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My PS5 Dream 🎮</title>
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #080d1b;
+  color: white;
+}
+
+header {
+  padding: 25px;
+  text-align: center;
+  color: #55aaff;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+main {
+  max-width: 700px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.hero {
+  background: linear-gradient(145deg,#172b52,#10172b);
+  padding: 25px;
+  border-radius: 22px;
+  border: 1px solid #254b82;
+}
+
+img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 15px;
+}
+
+h1 { color: #63adff; }
+
+p {
+  color: #cbd6e8;
+  line-height: 1.8;
+}
+
+.goal {
+  background: #121d33;
+  padding: 25px;
+  margin-top: 25px;
+  border-radius: 18px;
+}
+
+.amount {
+  color: #55aaff;
+  font-size: 38px;
+  font-weight: bold;
+}
+
+.bar {
+  height: 14px;
+  background: #34435d;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 20px 0;
+}
+
+.progress {
+  height: 100%;
+  width: 0%;
+  background: #287cff;
+  transition: width .5s;
+}
+
+button {
+  background: #287cff;
+  color: white;
+  padding: 14px 25px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  margin-top: 15px;
+  opacity: .7;
+}
+
+footer {
+  padding: 30px;
+  text-align: center;
+  color: #8998b3;
+}
+</style>
+</head>
+
+<body>
+
+<header>🎮 MY PS5 DREAM</header>
+
+<main>
+
+<section class="hero">
+
+<img
+src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db?w=900"
+alt="Console de jeu">
+
+<h1>Aidez-moi à réaliser mon rêve !</h1>
+
+<h2>Ma première PlayStation 5 🎮</h2>
+
+<p>
+Bonjour à tous ! ❤️<br>
+Je rêve d'avoir ma première PlayStation 5.
+J'ai créé cette page pour partager mon objectif.
+Chaque geste de soutien serait apprécié.
+Merci beaucoup !
+</p>
+
+</section>
+
+<section class="goal">
+
+<h2>🎯 Mon objectif</h2>
+
+<div class="amount" id="collected">0 DH</div>
+
+<p>Collectés sur 6 000 DH</p>
+
+<div class="bar">
+<div class="progress" id="progress"></div>
+</div>
+
+<h3 id="percentage">0 % atteint</h3>
+
+<button disabled>
+Dons bientôt disponibles
+</button>
+
+<p>
+Le compteur sera actualisé uniquement
+avec les dons réellement reçus et confirmés.
+</p>
+
+</section>
+
+<h2>Merci pour votre soutien ! 💙</h2>
+
+</main>
+
+<footer>
+My PS5 Dream © 2026
+</footer>
+
+<script>
+const objectif = 6000;
+
+// Valeur initiale : aucun don confirmé
+const donsConfirmes = 0;
+
+const pourcentage = Math.min(
+  (donsConfirmes / objectif) * 100, 100
+);
+
+document.getElementById("collected").textContent =
+  donsConfirmes.toLocaleString("fr-FR") + " DH";
+
+document.getElementById("progress").style.width =
+  pourcentage + "%";
+
+document.getElementById("percentage").textContent =
+  pourcentage.toFixed(1) + " % atteint";
+</script>
+
+</body>
+</html>
